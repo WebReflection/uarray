@@ -11,7 +11,11 @@
     "min": "uglifyjs index.js --support-ie8 --comments=/^!/ -c -m -o min.js",
     "test": "node test/index.js"
   },
-  "keywords": ["isArray", "slice", "indexOf"],
+  "keywords": [
+    "isArray",
+    "slice",
+    "indexOf"
+  ],
   "author": "Andrea Giammarchi",
   "license": "ISC",
   "devDependencies": {
@@ -30,5 +34,13 @@
     "import": "./esm/index.js",
     "default": "./cjs/index.js"
   },
-  "unpkg": "min.js"
+  "unpkg": "min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/uarray.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebReflection/uarray/issues"
+  },
+  "homepage": "https://github.com/WebReflection/uarray#readme"
 }
