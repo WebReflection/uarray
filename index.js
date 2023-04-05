@@ -1,15 +1,4 @@
-var uarray = (function (exports) {
-	'use strict';
+const {isArray} = Array;
+const {indexOf, slice} = [];
 
-	var isArray = Array.isArray;
-	var _ref = [],
-	    indexOf = _ref.indexOf,
-	    slice = _ref.slice;
-
-	exports.indexOf = indexOf;
-	exports.isArray = isArray;
-	exports.slice = slice;
-
-	return exports;
-
-}({}));
+export {isArray, indexOf, slice};

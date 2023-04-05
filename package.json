@@ -1,14 +1,10 @@
 {
   "name": "uarray",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Just most common borrowed method from Array",
-  "main": "./cjs/index.js",
+  "main": "./index.js",
+  "types": "module",
   "scripts": {
-    "build": "npm run cjs && npm run rollup:es && npm run rollup:babel && npm run min && npm run test",
-    "cjs": "ascjs esm cjs",
-    "rollup:es": "rollup --config rollup/es.config.js",
-    "rollup:babel": "rollup --config rollup/babel.config.js",
-    "min": "uglifyjs index.js --support-ie8 --comments=/^!/ -c -m -o min.js",
     "test": "node test/index.js"
   },
   "keywords": [
@@ -19,22 +15,17 @@
   "author": "Andrea Giammarchi",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
     "ascjs": "^3.1.2",
-    "rollup": "^2.0.5",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-terser": "^5.3.0",
-    "uglify-js": "^3.8.0"
+    "rollup": "^2.0.5"
   },
-  "module": "./esm/index.js",
+  "engines": {
+    "node": ">=14"
+  },
+  "module": "./index.js",
   "type": "module",
   "exports": {
-    "import": "./esm/index.js",
-    "default": "./cjs/index.js"
+    "import": "./index.js"
   },
-  "unpkg": "min.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/WebReflection/uarray.git"
